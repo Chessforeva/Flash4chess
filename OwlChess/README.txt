@@ -10,6 +10,7 @@ At first, a javascript port:
 http://chessforeva.appspot.com/C0_OwlChess.htm 
 
 The AS3 port derived from this.
+Online flash site: http://sisenis-1193.appspot.com/OwlChess.htm
 
 Flash is too underrated platform. Critics say it is too much resources
 consuming installable. Anyways, it is really good working virtual machine
