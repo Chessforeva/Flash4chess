@@ -1172,7 +1172,7 @@ public function pawnstrval( depth:int, color:int ):int
     var o:PAWNBITTYPE = pawnbit[color][depth];
 	var v:int = o.one;
 	var d:int = o.dob;
-    var iso:int = v &  ~((v << 1) | (v >>> 1));
+    var iso:int = v &  ~((v << 1) | (v >> 1));
     return (-(bitcount[d] * DOUBLEPAWN +
             bitcount[iso] * ISOLATEDPAWN +
 	    bitcount[iso & d] * ISOLATEDPAWN * 2));
@@ -1886,7 +1886,7 @@ public function drawgame(S:SEARCHTYPE):Boolean
             else if (searchfifty >= 20)  /*  10 moves without pawn moves or  */
                drawcount = 1;        /*  captures  */
         }
-		var n:int = ((repeatevalu * drawcount) >>> 2);	// int
+		var n:int = ((repeatevalu * drawcount)/4);	// int
         o.value += n;
         o.evaluation += n;	//int
     }
