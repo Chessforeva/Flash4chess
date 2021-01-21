@@ -4,6 +4,38 @@
 </head>
 <body>
 
+<script type="text/javascript">
+
+TOUCH_ = ('ontouchstart' in document.documentElement);
+MOBILE_ = (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i));
+Rdrct = 0;
+
+// if no flash possible then redirect to javascript
+if(TOUCH_ || MOBILE_)
+ {
+ var s = "";
+ s+='<div id="orstay">';
+ s+='Touch or mobile,<br>redirecting to JS OwlChess instead.<br>';
+ s+= '<input type="button" value="click to stay" onclick="staythere()">';
+ s+='</div>'; 
+ document.write(s);
+ setTimeout("redirect()",3000);
+ Rdrct = 1;
+ }
+
+function redirect()
+{
+ if(Rdrct)
+  document.location.href =
+	"http://chessforeva.gitlab.io/C0_OwlChess.htm?2Dmode";
+}
+
+function staythere()
+ { Rdrct = 0; document.getElementById("orstay").innerHTML = ""; }
+
+ </script>
+
+
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
  id="FLChess" width="100%" height="100%"
  codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">

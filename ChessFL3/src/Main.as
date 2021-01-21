@@ -1,4 +1,4 @@
-package
+﻿package
 {
 import flash.events.*;
 import flash.display.*;
@@ -14,7 +14,7 @@ import flash.ui.Mouse;
 //=================================================
 //
 // EMULATED 64bit chess engine
-// port by chessforeva.appspot.com
+// port by chessforeva.blogspot.com
 // for fun and chess lovers...
 // apr.2012
 
