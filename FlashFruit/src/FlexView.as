@@ -2234,8 +2234,16 @@ var i :int = 0;  // int
 
 //ASSERT(48, board_is_ok(src));
 
-dst.square = src.square;
-dst.pos = src.pos;
+dst.square = [];
+for (i = 0; i<src.square.length; i++ ) {
+dst.square[i] = src.square[i];
+}
+
+dst.pos = [];
+for (i = 0; i<src.pos.length; i++ ) {
+dst.pos[i] = src.pos[i];
+}
+
 dst.piece = [];
 dst.piece[0] = [];
 dst.piece[1] = [];
