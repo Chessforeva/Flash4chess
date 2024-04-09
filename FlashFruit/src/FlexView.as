@@ -14436,7 +14436,7 @@ for (i = 0; i< ClusterSize; i++ ) {
 
 entry = trans.table[ei+i];
 
-if (entry!=null and entry.lock!=null) {
+if (entry!=null && entry.lock!=null) {
 	  
 if (entry.lock == KEY_LOCK(key)) {
 
