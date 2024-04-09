@@ -2247,7 +2247,10 @@ for (i = 0; i<src.piece[1].length; i++ ) {
 dst.piece[1][i] = src.piece[1][i];
 }
 
-dst.piece_size = src.piece_size;
+dst.piece_size = [];
+for (i = 0; i<src.piece_size.length; i++ ) {
+dst.piece_size[i] = src.piece_size[i];
+}
 
 dst.pawn = [];
 dst.pawn[0] = [];
@@ -14433,7 +14436,9 @@ for (i = 0; i< ClusterSize; i++ ) {
 
 entry = trans.table[ei+i];
 
-if ( entry!=null && entry.lock == KEY_LOCK(key)) {
+if (entry!=null and entry.lock!=null) {
+	  
+if (entry.lock == KEY_LOCK(key)) {
 
 // found
 
@@ -14450,6 +14455,8 @@ Ret.trans_min_value = entry.min_value;
 Ret.trans_max_value = entry.max_value;
 
 return true;
+}
+
 } else {
 return false;
 }
