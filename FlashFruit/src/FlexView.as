@@ -6704,10 +6704,6 @@ var undo:undo_t = new undo_t();    // undo_t[1];
 
 //ASSERT(357, move_is_ok(move));
 
-if(move == 20282)
-{
-	var iii:int = 8;
-}
 move_do(board,move,undo);
 if (IS_IN_CHECK(board,board.turn)) {
 LIST_ADD(list,move);
@@ -6938,10 +6934,6 @@ from = MOVE_FROM(move);
 to = MOVE_TO(move);
 
 piece = board.square[from];
-if(!COLOUR_IS(piece, me))
- {
-	 var iii:int = 3;
- }
 //ASSERT(373, COLOUR_IS(piece,me));
 
 // update key stack
